@@ -3,17 +3,16 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
 }
 body {
-  width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: hsl(30, 38%, 92%);
 }
 .align-center {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: center;
 }
 .card {
@@ -21,26 +20,25 @@ body {
   width: 40rem;
   border-radius: 8px;
   background-color: hsl(0, 0%, 100%);
+  overflow: hidden;
 }
-.card img, .image {
+.card img {
   width: 20rem;
-  height: 100%;
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
 }
 .rigth {
   font-family: "Montserrat", sans-serif;
   padding: 2rem;
 }
-.header-card p {
+.rigth .category {
   letter-spacing: 5px;
   font-size: 0.875rem;
   margin-top: 0 !important;
   color: hsl(228, 12%, 48%);
 }
-.rigth .header-card h1 {
+.rigth h1 {
   font-family: "Fraunces", sans-serif;
   max-width: 13rem;
+  width: 700;
   color: hsl(212, 21%, 14%);
 }
 .rigth .description {
@@ -57,7 +55,7 @@ body {
   width: 80%;
   font-weight: 700;
 }
-.rigth s {
+.rigth del {
   color: hsla(228, 12%, 48%, 0.63);
   font-size: 0.8rem;
   font-weight: normal;
@@ -75,49 +73,38 @@ body {
   cursor: pointer;
 }
 .rigth .button-add-cart:hover {
-  background-color: hsl(212, 21%, 14%) ;
+  background-color: hsl(212, 21%, 14%);
 }
 .rigth .button-add-cart i {
+  margin-right: 0.5rem;
+}
+.rigth .icon-cart {
+  width: 1rem;
   margin-right: 0.5rem;
 }
 .spacing {
   margin-top: 1.5rem;
 }
-
-@media (max-width: 450px) {
-  .card .header-card h1, .card .description {
-    width: 100%;
-    max-width: 100%;
-  }
-  .card img {
-    transform: scale(1.5,1);
-
-  }
-
-}
 @media (max-width: 660px) {
+  body {
+    justify-content: center!important;
+  }
   .card {
+    margin-top: 1rem;
     flex-direction: column;
     width: 90vw;
     overflow: hidden;
   }
-  .image {
-    width: 100vw;
-    height: 25rem;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    overflow: hidden;
-  }
   .card img {
     width: 100vw;
-    height: 100%;
-    transform: scale(1.1,1.7);
+    min-height: 100%;
   }
-  .card .rigth {
-    width: 100%;
-  }
-  .card .header-card h1, .card .description {
+  .card h1,
+  .card .description {
     width: 80%;
     max-width: 80%;
+  }
+  .rigth .price {
+    width: 12rem;
   }
 }
