@@ -1,0 +1,124 @@
+@media (max-width: 880px) {
+  body {
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+  .container-forms {
+    padding: 0;
+  }
+  .container-steps {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    height: 16rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .container-steps picture img {
+    transform: translateY(-3.5rem);
+    width: 100vw;
+  }
+  .container-steps .steps p {
+    display: none;
+  }
+  .container-steps .steps {
+    margin: 0;
+    transform: translate(0, 2rem);
+    position: absolute;
+    flex-direction: row;
+  }
+  .container-forms {
+    background-color: hsl(217, 100%, 97%);
+    box-shadow: none;
+  }
+
+  .card {
+    z-index: 11;
+    background-color: #fff;
+    border-radius: 14px;
+    box-shadow: 4px 4px 4px 4px rgb(0 0 0 / 6%);
+    width: 70%;
+    height: 37rem;
+    margin: 0 auto calc(18% + 1rem);
+    padding: 1.5rem 1.5rem 0rem;
+  }
+
+  .select-plan {
+    height: 39rem;
+    margin-top: 2.5rem;
+  }
+  .select-plan .plans {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .select-plan .plans section {
+    width: 100%;
+    min-height: 6rem;
+    height: 1rem;
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  .select-plan > div {
+    width: 100%;
+  }
+  .select-plan .info-plan {
+    transform: translate(1rem, -1rem);
+  }
+  .select-plan .switch > div {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .alert-plan {
+    transform: translate(-2rem, 2rem);
+  }
+
+  .add-ons .services,
+  .add-ons .services > section,
+  .sumarry > div,
+  .plan-and-services-confirmation {
+    width: 100% !important;
+  }
+  .next-step,
+  .confirm,
+  .go-back {
+    transform: translateY(0);
+  }
+  .buttons {
+    position: fixed;
+    display: flex;
+    justify-content: space-around !important;
+    bottom: 0;
+    padding: 1rem;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+  }
+
+  .forms-personal-info .error {
+    width: 60%;
+  }
+}
+
+@media (max-width: 390px) {
+  .card {
+    height: 30rem;
+    width: 80%;
+    margin-top: 5rem;
+  }
+  .select-plan,.add-ons  {
+    height: 38rem;
+    margin-top: 5.5rem;
+  }
+
+}
+
+@media (max-width: 540px) and (max-height: 650px) {
+  .card {
+    height: 30rem;
+    margin-top: 5rem;
+  }
+}

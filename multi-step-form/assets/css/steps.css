@@ -1,0 +1,37 @@
+/* ASIDER */
+.steps {
+  position: absolute;
+  transform: translateY(-32rem);
+  flex-direction: column;
+  align-items: flex-start !important;
+  margin-left: 2rem;
+}
+.steps .step {
+  display: flex;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.steps .step .number-step {
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.6rem 0.9rem;
+  font-weight: 700;
+  margin-right: 1.5rem;
+}
+.steps .step .number-step-active {
+  background-color: hsl(206, 94%, 87%);
+  color: #000;
+}
+.steps .step .title-step {
+  font-size: 0.8rem;
+  margin-bottom: 0.1rem;
+  color: hsl(229, 24%, 70%);
+  font-weight: 400;
+}
+.steps .step .slug-step {
+  font-weight: 500;
+  color: #fff;
+}
+/* END ASIDE */

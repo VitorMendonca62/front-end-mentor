@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: local(Ubuntu), url(../fonts/Ubuntu-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: local(Ubuntu), url(../fonts/Ubuntu-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: local(Ubuntu), url(../fonts/Ubuntu-Bold.ttf);
+  font-weight: 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+.select-plan,
+.add-ons {
+  display: none;
+}
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  background-color: hsl(217, 100%, 97%);
+  min-height: 100vh;
+  width: 100vw;
+}
+.container-forms {
+  width: 58rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 14px;
+  justify-content: space-between;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
+}
+
+/* CARD */
+.card {
+  width: 100%;
+  height: 36rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 4rem 0 0 5.5rem;
+}
+.card header {
+  margin-bottom: 2.3rem;
+}
+.card header > h1 {
+  color: hsl(213, 96%, 18%);
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+.card header > p {
+  color: hsl(231, 11%, 63%);
+  font-weight: 400;
+}
+/* END CARD */
+
+/* BUTTONS */
+.next-step, .confirm {
+  float: right;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: hsl(213, 96%, 18%);
+  padding: 0.8rem 1.2rem;
+}
+.go-back {
+  margin-top: 0.8rem;
+  background-color: transparent;
+  border: none;
+  color: hsl(229, 24%, 70%);
+  font-weight: 400;
+}
+.go-back:hover {
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+}
+.next-step,
+.go-back,
+.confirm {
+  transform: translateY(4rem);
+  cursor: pointer;
+}
+.next-step:hover, .confirm:hover {
+  opacity: 0.92;
+}
+/* END BUTTONS */

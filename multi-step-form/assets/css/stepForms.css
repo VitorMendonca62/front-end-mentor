@@ -1,0 +1,34 @@
+/* FORMS */
+.forms-personal-info .error {
+    position: absolute;
+    padding: .3rem 0 0 0;
+    text-align: right;
+    font-size: 0.8rem;
+    width: 27rem;
+    color: hsl(354, 84%, 57%);
+  }
+  .forms-personal-info > section > label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+  }
+  .forms-personal-info > section > label span {
+    margin-bottom: 0.4rem;
+    color: hsl(213, 96%, 18%);
+    font-weight: 400;
+  }
+  .forms-personal-info > section > label input {
+    padding: 1rem;
+    border: 2px solid hsl(229, 24%, 87%);
+    outline: none;
+    border-radius: 6px;
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+  }
+  .forms-personal-info > section > label input::placeholder {
+    font-weight: 500;
+  }
+  .forms-personal-info > section > label input:focus {
+    border-color: hsl(243, 100%, 62%);
+  }
+  /* END FORMS */

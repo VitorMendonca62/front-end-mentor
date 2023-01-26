@@ -1,0 +1,17 @@
+.thanks {
+  align-items: center !important;
+  padding: 4rem 5.5rem !important;
+}
+.thanks > div {
+  min-height: 100%;
+}
+.thanks > div,
+.thanks > div > header {
+  flex-direction: column;
+}
+.thanks header h1{padding-top: 2rem;}
+.thanks header p{
+    line-height: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+}

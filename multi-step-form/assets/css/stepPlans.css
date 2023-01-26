@@ -1,0 +1,86 @@
+/* PLANS */
+.select-plan .plans {
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  width: 28rem;
+}
+.select-plan .plans section {
+  width: 8rem;
+  min-height: 10rem;
+  background-color: #fff;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 14px;
+  margin-right: 0.5rem;
+  padding: 1rem 0 1rem 1rem;
+  cursor: pointer;
+}
+.select-plan .plans section:hover {
+  border-color: hsl(243, 100%, 62%);
+}
+.select-plan .plans .plan-active {
+  border-color: hsl(243, 100%, 62%);
+  background-color: hsl(231, 100%, 99%);
+}
+.select-plan .plans section .title-plan {
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+  margin-top: 2rem;
+}
+.select-plan .plans section .price-plan {
+  color: hsl(229, 24%, 70%);
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+.select-plan .alert-plan {
+  /* position: absolute;
+  transform: translateY(7.5rem); */
+  flex: none;
+  display: none;
+  font-size: 0.7rem;
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
+.select-plan .switch{
+  background-color: hsl(231, 100%, 99%);
+  padding: 1rem;
+  margin-bottom: 3.3rem;
+}
+.select-plan .switch > div{
+  justify-content: space-between;
+  width: 50%;
+}
+.select-plan .switch label {
+  cursor: pointer;
+  content: " ";
+  display: inline-block;
+  width: 2.5rem;
+  height: 1.1rem;
+  border-radius: 8px;
+  background-color: hsl(213, 96%, 18%);
+}
+.select-plan .switch .checkbox-plan {
+  display: none;
+}
+.select-plan .switch label:after {
+  content: "";
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: 0 0.2rem;
+  border-radius: 50%;
+  background-color: hsl(231, 100%, 99%);
+  transition: 0.5s;
+}
+.monthly, .select-plan .checkbox-plan:checked ~ .yearly{
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
+.select-plan .checkbox-plan:checked ~ .monthly, .yearly {
+  color: hsl(231, 11%, 63%);
+  font-weight: 400;
+}
+.select-plan .checkbox-plan:checked ~ label::after {
+  transform: translateX(1.3rem);
+}
+/* END PLANS */

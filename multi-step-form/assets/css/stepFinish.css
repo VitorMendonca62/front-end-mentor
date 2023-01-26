@@ -1,0 +1,70 @@
+.sumarry .confirmation .plan-and-services-confirmation {
+  background-color: hsl(217, 100%, 97%);
+  width: 30rem;
+  padding: 1.5rem;
+}
+.sumarry .confirmation .container-type-plan {
+  justify-content: space-between;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid hsl(229, 24%, 87%);
+}
+.sumarry .confirmation .not-service {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sumarry .confirmation .type-plan h2,
+.sumarry .confirmation .finish-value-plan {
+  color: hsl(213, 98%, 21%);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.sumarry .confirmation .type-plan p {
+  padding-top: 0.2rem;
+  text-decoration: underline;
+  color: hsl(231, 11%, 63%);
+  font-weight: 400;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.sumarry .confirmation .type-plan p:hover {
+  color: hsl(243, 100%, 62%);
+  transition: 0.5s;
+}
+.sumarry .confirmation .container-confimartion-services {
+  padding: 1.5rem 0 0;
+}
+.sumarry .confirmation .container-confimartion-services .service {
+  justify-content: space-between;
+  color: hsl(231, 11%, 63%);
+  padding: 0.9rem 0 0 0;
+}
+.sumarry .confirmation .container-confimartion-services .service:nth-child(1) {
+  padding-top: 0;
+}
+.sumarry .confirmation .container-confimartion-services .service:last-child {
+  padding-bottom: 0;
+}
+.sumarry .confirmation .container-confimartion-services .price-service {
+  color: hsl(213, 98%, 21%);
+  font-weight: 500;
+}
+.sumarry .confirmation .container-total {
+  padding: 2rem 1.5rem 0 1.5rem;
+  color: hsl(231, 11%, 63%);
+  justify-content: space-between;
+}
+.sumarry .confirmation .container-total .total-price {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: hsl(243, 100%, 62%);
+}
+.sumarry .buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 30rem; 
+}
+.sumarry .confirm {
+  background-color: hsl(243, 100%, 62%);
+  color: #fff;
+}

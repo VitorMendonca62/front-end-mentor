@@ -1,0 +1,92 @@
+/*  ADD-ONS*/
+.add-ons .services {
+  width: 28rem;
+}
+.add-ons .services > section {
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 14px;
+  width: 28rem;
+  justify-content: space-between;
+  padding: 1.2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.add-ons .services > section * {
+  cursor: pointer;
+}
+.add-ons .services > section:hover {
+  border-color: hsl(243, 100%, 62%);
+}
+.add-ons .services > section:nth-child(1) {
+  margin-top: 0rem;
+}
+.add-ons .services > section > div {
+  justify-content: space-between;
+  margin-bottom: 0.2rem;
+}
+.add-ons .services > section label {
+  position: relative;
+  padding-left: 2.55rem;
+}
+.add-ons .services > section label h2 {
+  color: hsl(213, 98%, 21%);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.add-ons .services > section label p {
+  color: hsl(229, 24%, 70%);
+  font-weight: 400;
+  font-size: 1rem;
+  padding-top: 0.3rem;
+}
+.add-ons .services > section .add-price {
+  font-size: 0.9rem;
+  color: hsl(243, 100%, 62%);
+  font-weight: 700;
+}
+.add-ons .services > section input[type="checkbox"] {
+  border: 0;
+  height: 1px;
+  position: absolute;
+  width: 1px;
+}
+.add-ons .services > section label:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 4px;
+}
+.add-ons .services > section label::after {
+  content: "";
+  background: url(../images/icon-checkmark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: red;
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  color: hsl(243, 100%, 62%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.add-ons .services > section input:checked + label::before {
+  background: hsl(243, 100%, 62%);
+  border: none;
+}
+.add-ons .services > section input:checked + label::after {
+  opacity: 1;
+}
+.add-ons .services .service-active {
+  border-color: hsl(243, 100%, 62%);
+  background-color: hsl(235, 99%, 99%);
+}
+/* END ADD-ONS */
