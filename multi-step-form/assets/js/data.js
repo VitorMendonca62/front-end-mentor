@@ -12,12 +12,14 @@ function setDataInLocal(data) {
 
 function getData() {
   const data = JSON.parse(sessionStorage.getItem("dataUser"));
-  return  data
+  return data;
 }
 const dataUser = getData();
 
 if (index === 1 && !dataUser) {
   setDataInLocal(dataUserSafe);
 }
+
+
 
 export { setDataInLocal, getData };

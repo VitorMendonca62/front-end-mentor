@@ -88,6 +88,6 @@ if (index === 4) {
   const change = document.querySelector(".change")
 
   change.addEventListener("click", () => {
-    location.href = location.origin + `?step=`;
+    location.href = location.origin + `?step=2`;
   })
 }

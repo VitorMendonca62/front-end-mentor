@@ -1,25 +1,18 @@
 import { setDataInLocal, getData } from "./data.js";
 import { index } from "./main.js";
 
+function setPrice() {
+  this.price =
+    this.type === "yearly" ? this.defaultPrice * 10 : this.defaultPrice;
+}
+
 if (index == 2) {
   const dataUser = getData();
 
-  function setPricePlan() {
-    this.price =
-      this.type === "yearly" ? this.defaultPrice * 10 : this.defaultPrice;
-  }
-
-  function setPriceService() {
-    this.price =
-      this.type === "yearly" ? this.defaultPrice * 10 : this.defaultPrice;
-  }
-
-  dataUser.plan.setPricePlan = setPricePlan;
+  dataUser.plan.setPrice = setPrice;
   if (!!dataUser.addOns) {
     dataUser.addOns.forEach((service) => {
-      if (service) {
-        service.setPriceService = setPriceService;
-      }
+      if (service) service.setPrice = setPrice;
     });
   }
 
@@ -29,21 +22,18 @@ if (index == 2) {
       price: 9,
       defaultPrice: 9,
       type: "monthly",
-      setPricePlan,
     },
     {
       title: "advanced",
       price: 12,
       defaultPrice: 12,
       type: "monthly",
-      setPricePlan,
     },
     {
       title: "pro",
       price: 15,
       type: "monthly",
       defaultPrice: 15,
-      setPricePlan,
     },
   ];
 
@@ -58,7 +48,7 @@ if (index == 2) {
   const elemsPricePlan = [...document.querySelectorAll(".price-plan")];
 
   function activePlan(e) {
-    const id = e.target.id;
+    const id = e.target.getAttribute("position");
     const elem = plans[id];
 
     if (elem.classList[0]) {
@@ -87,15 +77,13 @@ if (index == 2) {
     const typePlan = stateCheckbox ? "yearly" : "monthly";
 
     dataUser.plan.type = typePlan;
-    dataUser.plan.setPricePlan();
+    dataUser.plan.setPrice();
 
     if (dataUser.addOns) {
       dataUser.addOns.forEach((service) => {
-        if (service) {
-          if (service.defaultPrice) {
-            service.type = typePlan;
-            service.setPriceService();
-          }
+        if (service?.title) {
+          service.type = typePlan;
+          service.setPrice();
         }
       });
     }
@@ -114,21 +102,12 @@ if (index == 2) {
       }
     });
     setDataInLocal(dataUser);
-    return typePlan;
   }
-  if (index === 2 && dataUser.plan.type === "yearly") {
-    switchButtonPlan.checked = true;
-    changePlan();
-  } else {
-    switchButtonPlan.checked = false;
-    changePlan();
-  }
+  switchButtonPlan.checked = dataUser.plan.type === "yearly";
+  changePlan();
 
   switchButtonPlan.addEventListener("change", changePlan);
   plans[0].classList.add("plan-active");
-
-  if (document.querySelector("body").clientWidth) {
-    const state = switchButtonPlan.cchecked;
-    plans[index].style.minHeight = state ? "6.5rem" : "6rem";
-  }
 }
+
+export { setPrice };
