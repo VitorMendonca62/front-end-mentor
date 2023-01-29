@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Where in the world?</title>
+  </head>
+  <body>
+    <header>
+      <h1>Where in the world?</h1>
+      <span class="dark-mode">
+        <i class="fa fa-moon-o"></i>
+        Dark Mode
+      </span>
+    </header>
+    <main>
+      <div class="search-and-filter align-center">
+        <label for="search" class="input-search">
+          <i class="fa fa-search"></i>
+          <input
+            type="text"
+            id="search"
+            placeholder="Search for a country..."
+          />
+        </label>
+        <div class="container-select">
+          <span class="filter">Filter by Region</span>
+          <i class="fa fa-arrow-down" aria-hidden="true"></i>
+          <ul class="select">
+            <li value="africa">Africa</li>
+            <li value="americas">America</li>
+            <li value="asia">Asia</li>
+            <li value="europe">Europe</li>
+            <li  value="oceania">Oceania</li>
+          </ul>
+        </div>
+      </div>
+      <div class="countries">
+        
+      </div>
+    </main>
+  </body>
+  <script src="./assets/js/filter.js" type="module"></script>
+  <script src="./assets/js/main.js" type="module"></script>
+  <script src="./assets/js/darkAndligthmode.js" type="module"></script>
+</html>
