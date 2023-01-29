@@ -1,6 +1,6 @@
 const containerCountries = document.querySelector(".countries");
 let start = 0;
-let end = 50;
+let end = 49;
 
 async function getData() {
   const response = await fetch("https://restcountries.com/v3.1/all");
@@ -73,10 +73,9 @@ window.addEventListener("scroll", async (e) => {
 
     if (percentage > 43 && start <= 150 && end <= 200) {
       start += 50;
-      end += 50;
+      end += 49;
       travelCountries(countries, start, end);
     }
   }
 });
-
 export { getData, travelCountries };
